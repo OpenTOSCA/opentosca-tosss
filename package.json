@@ -1,0 +1,96 @@
+{
+  "name": "tosca-orchestrator-selection-support-system",
+  "version": "1.0.0",
+  "homepage": "https://tosss.opentosca.org",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.3.1",
+    "@mui/lab": "^5.0.0-alpha.67",
+    "@mui/material": "^5.3.1",
+    "@mui/x-data-grid": "^5.5.0",
+    "@reduxjs/toolkit": "^1.7.2",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "ahooks": "^3.1.9",
+    "ajv": "^8.11.2",
+    "date-fns": "^2.28.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "gts": "^3.1.0",
+    "js-yaml": "^4.1.0",
+    "papaparse": "^5.3.1",
+    "react": "^17.0.2",
+    "react-copy-to-clipboard": "^5.0.4",
+    "react-dom": "^17.0.2",
+    "react-json-view": "^1.21.3",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.1",
+    "react-router-hash-link": "^2.4.3",
+    "react-scripts": "5.0.0",
+    "react-scroll": "^1.8.4",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "open": "open-cli https://github.com/OpenTOSCA/opentosca-tosss",
+    "browse": "open-cli https://tosss.opentosca.org",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
+    "serve": "yarn start",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "yarn compile",
+    "pretest": "yarn compile",
+    "posttest": "yarn lint",
+    "screenshots": "yarn ts-node cmds/screenshots.ts"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "@types/node": "^14.11.2",
+    "@types/papaparse": "^5.3.2",
+    "@types/puppeteer": "^7.0.4",
+    "@types/react": "^17.0.20",
+    "@types/react-copy-to-clipboard": "^5.0.2",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-redux": "^7.1.22",
+    "@types/react-router-hash-link": "^2.4.5",
+    "@types/react-scroll": "^1.8.3",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-react": "^7.28.0",
+    "gts": "^3.1.0",
+    "husky": "^7.0.4",
+    "open-cli": "^7.1.0",
+    "prettier": "^2.5.1",
+    "puppeteer": "^19.5.2",
+    "ts-node": "^10.9.1",
+    "typescript": "4.4.4"
+  }
+}

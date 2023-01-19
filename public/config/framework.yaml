@@ -1,0 +1,361 @@
+---
+# Business View
+- id: business
+  name: Business View
+  categories:
+
+    # General Category
+    - id: general
+      name: General
+      criteria:
+
+        # Orchestrator Identifier
+        - id: id
+          name: Identifier
+          type: string
+          hidden_inside_filter: true
+          hidden_inside_table: true
+          hidden_inside_questionnaire: true
+          hidden_inside_framework: true
+          description: The orchestrator identifier.
+
+        # Orchestrator Name
+        - id: orchestrator
+          name: Orchestrator
+          type: string
+          hidden_inside_table: true
+          hidden_inside_questionnaire: true
+          description: The orchestrator name.
+
+        # Website Link
+        - id: website
+          name: Website
+          type: string
+          hidden_inside_filter: true
+          hidden_inside_questionnaire: true
+          description: The orchestrator website.
+
+        # Repository Link
+        - id: repository
+          name: Repository
+          type: string
+          hidden_inside_filter: true
+          hidden_inside_questionnaire: true
+          description: The orchestrator repository.
+
+        # Service Types Criterion
+        - id: service_types
+          name: Service Types
+          type: strings
+          values:
+            - IaaS
+            - CaaS
+            - PaaS
+            - FaaS
+            - SaaS
+          description: >
+            The list of supported service types. 
+            Values are IaaS, CaaS, PaaS, FaaS, or SaaS.
+
+        # Cloud Types Criterion
+        - id: cloud_types
+          name: Cloud Types
+          type: strings
+          values:
+            - Public Cloud
+            - Community Cloud
+            - Hybrid Cloud
+            - Private Cloud
+          description: >
+            The list of supported cloud types. 
+            Values are public, community, private or hybrid.
+
+    # Source Code Category
+    - id: source_code
+      name: Source Code
+      criteria:
+
+        # Programming Language Criterion
+        - id: programming_language
+          name: Programming Language
+          type: string
+          description: >
+            The programming language in which the orchestrator is written.
+            If several languages are used then the primary programming language is chosen, e.g., the one that is used for the orchestration logic or that has the highest amount of lines of code.
+            For example, Java or Python.
+
+        # License Criterion
+        - id: license
+          name: License
+          type: string
+          description: >
+            The license under which the orchestrator is available. 
+            For example, Apache License 2.0 or  MIT License.
+
+        # Open Source Criterion
+        - id: open_source
+          name: Open Source
+          type: boolean
+          description: The orchestrator is available under an open-source license.
+
+    # GitHub Category
+    - id: github
+      name: GitHub
+      criteria:
+
+        # GitHub Stars Criterion
+        - id: stars
+          name: Stars
+          type: number
+          description: The number of stars of the repository on GitHub.
+
+        # GitHub Subscribers Criterion
+        - id: subscribers
+          name: Subscribers
+          type: number
+          description: The number of subscribers of the repository on GitHub.
+
+        # GitHub Archived Criterion
+        - id: archived
+          name: Archived
+          type: boolean
+          description: The repository on GitHub is archived.
+
+        # GitHub Forks Criterion
+        - id: forks
+          name: Forks
+          type: number
+          description: The number of forks of the repository on GitHub.
+
+        # GitHub Commits Criterion
+        - id: commits
+          name: Commits
+          type: number
+          description: The number of commits at the default branch of the repository on GitHub.
+
+        # GitHub Contributors Criterion
+        - id: contributors
+          name: Contributors
+          type: number
+          description: The number of contributors to the repository on GitHub.
+
+        # GitHub Created At Criterion
+        - id: created_at
+          name: Created At
+          type: date
+          description: The date when the repository on GitHub has been created.
+
+        # GitHub Updated At Criterion
+        - id: updated_at
+          name: Updated At
+          type: date
+          description: The date of the latest commit at the default branch of the repository on GitHub.
+
+# Technical View
+- id: technical
+  name: Technical View
+  categories:
+
+    # TOSCA Category
+    - id: tosca
+      name: TOSCA
+      criteria:
+
+        # Official TOSCA Versions Criteria
+        - id: official_tosca_versions
+          name: Official TOSCA Versions
+          type: strings
+          description: >
+            The list of supported TOSCA versions published by OASIS.
+            For example, TOSCA Version 1.0 or TOSCA Simple Profile in YAML Version 1.3.
+
+        # Unofficial TOSCA Versions Criteria
+        - id: unofficial_tosca_versions
+          name: Unofficial TOSCA Versions
+          type: strings
+          description: >
+            The list of supported TOSCA versions not published by OASIS.
+            For example, Cloudify DSL 1.3 or Unfurl DSL 1.0.
+
+        # TOSCA Native Criteria
+        - id: tosca_native
+          name: TOSCA Native
+          type: boolean
+          description: The orchestrator is TOSCA native, i.e., the orchestrator has been developed from scratch to support the TOSCA standard.
+
+    # Execution Category
+    - id: execution
+      name: Execution
+      criteria:
+
+        # Declarative Deployment Criterion
+        - id: declarative_deployment
+          name: Declarative Deployment
+          type: boolean
+          description: The orchestrator supports the declarative deployment of applications.
+
+        # Imperative Deployment Criterion
+        - id: imperative_deployment
+          name: Imperative Deployment
+          type: strings
+          description: >
+            The list of supported languages for the imperative deployment of applications.
+            For example, BPEL or BPMN.
+
+        # Multi-Cloud Deployment Criterion
+        - id: multi_cloud_deployment
+          name: Multi-Cloud Deployment
+          type: boolean
+          description: >
+            The orchestrator supports the declarative deployment of multi-cloud applications.
+            A multi-cloud application is a distributed application consisting of components hosted on different clouds.
+
+        # Declarative Deployment Update Criterion
+        - id: declarative_deployment_update
+          name: Declarative Deployment Update
+          type: boolean
+          description: >
+            The orchestrator supports deploying an updated version of the application using declarative deployment.
+            Therefore, an (manually) updated topology can be processed by the orchestrator to adapt the running application accordingly.
+
+        # Decentralized Deployment Criterion
+        - id: decentralized_deployment
+          name: Decentralized Deployment
+          type: boolean
+          description: >
+            The orchestrator supports deploying a distributed application in a decentralized manner using, e.g., agents in remote environments.
+            This includes especially the deployment of components that are in private networks to which the orchestrator does not have direct access.
+
+        # Implementation Artifact Types Criterion
+        - id: implementation_artifact_types
+          name: Implementation Artifact Types
+          type: strings
+          description: The list of supported implementation artifact types. For example, Scripts, Ansible, or Chef.
+
+        # Orchestrator-Specific Types Criterion
+        - id: orchestrator_specific_types
+          name: Orchestrator-Specific Types
+          type: strings
+          description: >
+            The list of supported orchestrator-specific types.
+            Corresponding definitions and management logic are integrated into the orchestrator, e.g., by implementing a plugin.
+            As a consequence, a user can simply use these types and must neither model them nor implement any implementation artifacts.
+
+    # Extensibility Category
+    - id: extensibility
+      name: Extensibility
+      criteria:
+
+        # Custom TOSCA Types Criterion
+        - id: custom_tosca_types
+          name: Custom TOSCA Types
+          type: boolean
+          description: The orchestrator supports deploying node and relationship templates with custom types whose definitions are ontologically derived and provided inside service templates.
+
+        # Custom Orchestrator-Specific Types Criterion
+        - id: custom_orchestrator_specific_types
+          name: Custom Orchestrator-Specific Types
+          type: boolean
+          description: >
+            The orchestrator supports deploying node and relationship templates with custom orchestrator-specific types, e.g., by implementing a plugin.
+            The integration of these types into the orchestrator must not require a contribution to the code base of the orchestrator but should be possible, e.g., by configuring and restarting the orchestrator with a newly added plugin, without rebuilding or repackaging the orchestrator.
+
+        # Custom Implementation Artifact Types Criterion
+        - id: custom_implementation_artifact_types
+          name: Custom Implementation Artifact Types
+          type: boolean
+          description: >
+            The orchestrator supports executing custom implementation artifact types, e.g., by implementing a plugin.
+            The integration of these types into the orchestrator must not require a contribution to the code base of the orchestrator but should be possible, e.g., by configuring and restarting the orchestrator with a newly added plugin, without rebuilding or repackaging the orchestrator.
+
+    # Administration Category
+    - id: administration
+      name: Administration
+      criteria:
+
+        # Operating Modes Criterion
+        - id: operating_modes
+          name: Operating Modes
+          type: strings
+          values:
+            - On-Premise
+            - Service Offering
+          description: >
+            The orchestrator can be operated on-premise or consumed as a service.
+            Values are on-premise and as-a-service.
+
+        # Operating Systems Criterion
+        - id: operating_systems
+          name: Operating Systems
+          type: strings
+          description: >
+            The list of operating systems on which the orchestrator can be installed. 
+            For example, Windows, macOS, or Linux.
+
+    # Interface Category
+    - id: interface
+      name: Interface
+      criteria:
+
+        # GUI Criterion
+        - id: gui
+          name: Graphical User Interface
+          type: boolean
+          description: >
+            The orchestrator provides a Graphical User Interface (GUI).
+            The GUI must at least provide the functionality to deploy and undeploy applications.
+
+        # CLI Criterion
+        - id: cli
+          name: Command Line Interface
+          type: boolean
+          description: >
+            The orchestrator provides a Command Line Interface (CLI).
+            The CLI must at least provide the functionality to deploy and undeploy applications.
+
+        # API Criterion
+        - id: api
+          name: Application Programming Interface
+          type: strings
+          description: >
+            The list of supported Application Programming Interfaces (APIs).
+            An API must at least provide the functionality to deploy and undeploy applications.
+            Furthermore, the interaction with the orchestrator using an API must be possible over the network.
+            For example, HTTP REST API, gRPC, or GraphQL.
+
+    # Documentation Category
+    - id: documentation
+      name: Documentation
+      criteria:
+
+        # User Documentation Criterion
+        - id: user_documentation
+          name: User Documentation
+          type: boolean
+          description: >
+            The orchestrator provides documentation that introduces the features of the orchestrator and how to use them.
+            The documentation must at least contain instructions on how to deploy and undeploy an application.
+
+        # Administration Documentation Criterion
+        - id: administration_documentation
+          name: Administration Documentation
+          type: boolean
+          description: >
+            The orchestrator provides documentation that introduces the components of the orchestrator on an administrative level.
+            The documentation must contain at least instructions about installation and configuration.
+
+        # Implementation Artifact Type Development Criterion
+        - id: implementation_artifact_type_development
+          name: Implementation Artifact Type Development Documentation
+          type: boolean
+          description: >
+            The orchestrator provides documentation for developing custom implementation artifact types.
+            Such documentation contains, e.g., instructions on how to implement, build and enable a plugin.
+
+        # Orchestrator-Specific Type Development Criterion
+        - id: orchestrator_specific_type_development
+          name: Orchestrator-Specific Type Development Documentation
+          type: boolean
+          description: >
+            The orchestrator provides documentation for developing custom orchestrator-specific types.
+            Such documentation contains, e.g., instructions on how to implement, build and enable a plugin.

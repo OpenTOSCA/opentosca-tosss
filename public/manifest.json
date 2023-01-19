@@ -1,0 +1,9 @@
+{
+  "short_name": "TOSCA Orchestrator Selection Support System",
+  "name": "TOSCA Orchestrator Selection Support System",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#9c27b0",
+  "background_color": "#ffffff"
+}
