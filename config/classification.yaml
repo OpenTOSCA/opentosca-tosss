@@ -1,0 +1,381 @@
+---
+# Cloudify
+- general:
+    id: cloudify
+    website: https://cloudify.co
+    repository: https://github.com/cloudify-cosmo/cloudify-manager
+    orchestrator: Cloudify
+    service_types:
+      - IaaS
+      - CaaS
+      - PaaS
+      - FaaS
+      - SaaS
+    cloud_types:
+      - Public Cloud
+      - Community Cloud
+      - Private Cloud
+      - Hybrid Cloud
+  source_code:
+    programming_language: Python
+    license: Apache License 2.0
+    open_source: True
+  github:
+    stars: 137
+    subscribers: 40
+    archived: False
+    forks: 74
+    commits: 9140
+    contributors: 59
+    created_at: '2014-04-01'
+    updated_at: '2023-01-10'
+  tosca:
+    official_tosca_versions: [ ]
+    unofficial_tosca_versions:
+      - Cloudify DSL 1.3
+      - Cloudify DSL 1.4
+    tosca_native: True
+  execution:
+    declarative_deployment: True
+    imperative_deployment:
+      - Python
+      - CustomWF
+    multi_cloud_deployment: True
+    declarative_deployment_update: True
+    decentralized_deployment: True
+    implementation_artifact_types:
+      - Ansible Playbook
+      - Fabric Task
+      - Script Artifact
+      - Raw Terminal
+    orchestrator_specific_types:
+      - Ansible Playbook
+      - AWS Types
+      - Azure Types
+      - Cloud Init Config
+      - Configuration Types
+      - Deployment Proxy Types
+      - Docker Types
+      - File
+      - FTP
+      - GCP Types
+      - Helm Types
+      - Host Pool Types
+      - Kubernetes Types
+      - Netconf Types
+      - NSX-T Types
+      - OpenStack Types
+      - Raw Terminal
+      - REST Call
+      - Secrets
+      - SSH Key
+      - StarlingX WRCP
+      - Terraform Installation
+      - Terraform Module
+      - vCloud Types
+      - vSphere Types
+  extensibility:
+    custom_tosca_types: True
+    custom_orchestrator_specific_types: True
+    custom_implementation_artifact_types: True
+  administration:
+    operating_modes:
+      - On-Premise
+    operating_systems:
+      - Linux
+  interface:
+    gui: True
+    cli: True
+    api:
+      - HTTP REST API
+  documentation:
+    user_documentation: True
+    administration_documentation: True
+    orchestrator_specific_type_development: True
+    implementation_artifact_type_development: True
+
+# OpenTOSCA
+- general:
+    id: opentosca
+    orchestrator: OpenTOSCA
+    repository: https://github.com/OpenTOSCA/container
+    website: https://opentosca.org
+    service_types:
+      - IaaS
+      - CaaS
+      - PaaS
+      - FaaS
+      - SaaS
+    cloud_types:
+      - Public Cloud
+      - Community Cloud
+      - Private Cloud
+      - Hybrid Cloud
+  source_code:
+    programming_language: Java
+    license: Apache License 2.0
+    open_source: True
+  github:
+    stars: 50
+    subscribers: 30
+    archived: False
+    forks: 26
+    commits: 1492
+    contributors: 36
+    created_at: '2014-09-02'
+    updated_at: '2022-12-22'
+  tosca:
+    official_tosca_versions:
+      - TOSCA Version 1.0
+    unofficial_tosca_versions: [ ]
+    tosca_native: True
+  execution:
+    declarative_deployment: True
+    imperative_deployment:
+      - BPEL
+      - BPMN
+    multi_cloud_deployment: True
+    declarative_deployment_update: True
+    decentralized_deployment: True
+    implementation_artifact_types:
+      - Ansible Playbook
+      - Chef Cookbook
+      - Java Web Application
+      - Script Artifact
+      - Python Archive
+      - Python Script
+    orchestrator_specific_types: [ ]
+  extensibility:
+    custom_tosca_types: True
+    custom_orchestrator_specific_types: Not Applicable
+    custom_implementation_artifact_types: False
+  administration:
+    operating_modes:
+      - On-Premise
+    operating_systems:
+      - Linux
+      - macOS
+      - Windows
+  interface:
+    gui: True
+    cli: False
+    api:
+      - HTTP REST API
+  documentation:
+    user_documentation: True
+    administration_documentation: True
+    orchestrator_specific_type_development: Not Applicable
+    implementation_artifact_type_development: Not Applicable
+
+# Unfurl
+- general:
+    id: unfurl
+    orchestrator: Unfurl
+    repository: https://github.com/onecommons/unfurl
+    website: https://unfurl.run
+    service_types:
+      - IaaS
+      - CaaS
+      - PaaS
+      - FaaS
+      - SaaS
+    cloud_types:
+      - Public Cloud
+      - Community Cloud
+      - Private Cloud
+      - Hybrid Cloud
+  source_code:
+    programming_language: Python
+    open_source: True
+    license: MIT License
+  github:
+    stars: 89
+    subscribers: 8
+    archived: False
+    forks: 12
+    commits: 1710
+    contributors: 9
+    created_at: '2018-05-10'
+    updated_at: '2023-01-11'
+  tosca:
+    official_tosca_versions:
+      - TOSCA Simple Profile in YAML Version 1.3
+    unofficial_tosca_versions:
+      - Unfurl DSL 1.0
+    tosca_native: True
+  execution:
+    declarative_deployment: True
+    imperative_deployment:
+      - TOSCA Simple Profile in YAML Version 1.3
+    multi_cloud_deployment: True
+    declarative_deployment_update: True
+    decentralized_deployment: False
+    implementation_artifact_types:
+      - Ansible Playbook
+      - Script Artifact
+      - Terraform Module
+    orchestrator_specific_types:
+      - DNS Types
+      - Docker Container
+      - Helm Types
+      - Kubernetes Types
+      - Supervisor Types
+      - Terraform Module
+  extensibility:
+    custom_tosca_types: True
+    custom_orchestrator_specific_types: False
+    custom_implementation_artifact_types: False
+  administration:
+    operating_modes:
+      - On-Premise
+      - Service Offering
+    operating_systems:
+      - Linux
+      - macOS
+  interface:
+    gui: True
+    cli: True
+    api:
+      - Protocol Unknown
+  documentation:
+    user_documentation: True
+    administration_documentation: True
+    orchestrator_specific_type_development: Not Applicable
+    implementation_artifact_type_development: Not Applicable
+
+# xOpera
+- general:
+    id: xopera
+    orchestrator: xOpera
+    repository: https://github.com/xlab-si/xopera-opera
+    website: https://xlab-si.github.io/xopera-docs/index.html
+    service_types:
+      - IaaS
+      - CaaS
+      - PaaS
+      - FaaS
+      - SaaS
+    cloud_types:
+      - Public Cloud
+      - Community Cloud
+      - Private Cloud
+      - Hybrid Cloud
+  source_code:
+    programming_language: Python
+    open_source: True
+    license: Apache License 2.0
+  github:
+    stars: 30
+    subscribers: 9
+    archived: False
+    forks: 13
+    commits: 393
+    contributors: 11
+    created_at: '2019-02-11'
+    updated_at: '2022-12-27'
+  tosca:
+    official_tosca_versions:
+      - TOSCA Simple Profile in YAML Version 1.3
+    unofficial_tosca_versions: [ ]
+    tosca_native: True
+  execution:
+    declarative_deployment: True
+    imperative_deployment: [ ]
+    multi_cloud_deployment: True
+    declarative_deployment_update: True
+    decentralized_deployment: False
+    implementation_artifact_types:
+      - Ansible Playbook
+    orchestrator_specific_types: [ ]
+  extensibility:
+    custom_tosca_types: True
+    custom_orchestrator_specific_types: Not Applicable
+    custom_implementation_artifact_types: False
+  administration:
+    operating_modes:
+      - On-Premise
+    operating_systems:
+      - Linux
+  interface:
+    gui: False
+    cli: True
+    api:
+      - HTTP REST API
+  documentation:
+    user_documentation: True
+    administration_documentation: True
+    orchestrator_specific_type_development: Not Applicable
+    implementation_artifact_type_development: Not Applicable
+
+# Yorc
+- general:
+    id: yorc
+    orchestrator: Yorc
+    repository: https://github.com/ystia/yorc
+    website: https://ystia.github.io
+    service_types:
+      - IaaS
+      - CaaS
+      - PaaS
+      - FaaS
+      - SaaS
+    cloud_types:
+      - Public Cloud
+      - Community Cloud
+      - Private Cloud
+      - Hybrid Cloud
+  source_code:
+    programming_language: Go
+    open_source: True
+    license: Apache License 2.0
+  github:
+    stars: 59
+    subscribers: 6
+    archived: False
+    forks: 21
+    commits: 4586
+    contributors: 21
+    created_at: '2018-02-19'
+    updated_at: '2022-11-22'
+  tosca:
+    official_tosca_versions:
+      - TOSCA Simple Profile in YAML Version 1.2
+    unofficial_tosca_versions: [ ]
+    tosca_native: True
+  execution:
+    declarative_deployment: False
+    imperative_deployment:
+      - TOSCA Simple Profile in YAML Version 1.2
+    multi_cloud_deployment: True
+    declarative_deployment_update: Not Applicable
+    decentralized_deployment: False
+    implementation_artifact_types:
+      - Ansible Playbook
+      - Bash Script
+      - Python Script
+    orchestrator_specific_types:
+      - AWS Types
+      - GCP Types
+      - Host Pool Types
+      - Kubernetes Types
+      - OpenStack Types
+      - Slurm Types
+  extensibility:
+    custom_tosca_types: True
+    custom_orchestrator_specific_types: True
+    custom_implementation_artifact_types: True
+  administration:
+    operating_modes:
+      - On-Premise
+    operating_systems:
+      - Linux
+  interface:
+    gui: False
+    cli: True
+    api:
+      - HTTP REST API
+  documentation:
+    user_documentation: True
+    administration_documentation: True
+    orchestrator_specific_type_development: True
+    implementation_artifact_type_development: True
