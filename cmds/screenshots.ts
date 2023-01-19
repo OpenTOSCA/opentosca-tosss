@@ -30,6 +30,10 @@ async function main() {
     await page.goto('http://localhost:3000/questionnaire');
     await page.screenshot({path: getPath('questionnaire.png')})
 
+    await page.setViewport({width: 1080, height: 1900})
+    await page.goto('http://localhost:3000')
+    await page.screenshot({path: getPath('tosss.png')})
+
     await browser.close()
 }
 
