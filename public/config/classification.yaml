@@ -235,8 +235,7 @@
   interface:
     gui: True
     cli: True
-    api:
-      - Protocol Unknown
+    api: [ ]
   documentation:
     user_documentation: True
     administration_documentation: True
