@@ -49,13 +49,13 @@
           type: strings
           values:
             - IaaS
-            - CaaS
             - PaaS
-            - FaaS
             - SaaS
+            - FaaS
+            - CaaS
           description: >
             The list of supported service types. 
-            Values are IaaS, CaaS, PaaS, FaaS, or SaaS.
+            Values are IaaS, PaaS, SaaS, FaaS, or CaaS.
 
         # Cloud Types Criterion
         - id: cloud_types
@@ -90,7 +90,7 @@
           type: string
           description: >
             The license under which the orchestrator is available. 
-            For example, Apache License 2.0 or  MIT License.
+            For example, Apache License 2.0, GNU General Public License 1.0, or  MIT License.
 
         # Open Source Criterion
         - id: open_source
@@ -107,49 +107,49 @@
         - id: stars
           name: Stars
           type: number
-          description: The number of stars of the repository on GitHub.
+          description: The number of stars of the repository hosted on GitHub.
 
         # GitHub Subscribers Criterion
         - id: subscribers
           name: Subscribers
           type: number
-          description: The number of subscribers of the repository on GitHub.
+          description: The number of subscribers of the repository hosted on GitHub.
 
         # GitHub Archived Criterion
         - id: archived
           name: Archived
           type: boolean
-          description: The repository on GitHub is archived.
+          description: The repository hosted on GitHub is no longer active but archived.
 
         # GitHub Forks Criterion
         - id: forks
           name: Forks
           type: number
-          description: The number of forks of the repository on GitHub.
+          description: The number of forks of the repository hosted on GitHub.
 
         # GitHub Commits Criterion
         - id: commits
           name: Commits
           type: number
-          description: The number of commits at the default branch of the repository on GitHub.
+          description: The number of commits of the default branch of the repository hosted on GitHub.
 
         # GitHub Contributors Criterion
         - id: contributors
           name: Contributors
           type: number
-          description: The number of contributors to the repository on GitHub.
+          description: The number of contributors to the repository hosted on GitHub.
 
         # GitHub Created At Criterion
         - id: created_at
           name: Created At
           type: date
-          description: The date when the repository on GitHub has been created.
+          description: The date when the repository hosted on GitHub has been created.
 
         # GitHub Updated At Criterion
         - id: updated_at
           name: Updated At
           type: date
-          description: The date of the latest commit at the default branch of the repository on GitHub.
+          description: The date of the latest commit of the default branch of the GitHub repository.
 
 # Technical View
 - id: technical
@@ -167,7 +167,7 @@
           type: strings
           description: >
             The list of supported TOSCA versions published by OASIS.
-            For example, TOSCA Version 1.0 or TOSCA Simple Profile in YAML Version 1.3.
+            For example, TOSCA Version 1.0, TOSCA Simple Profile in YAML Version 1.3, or TOSCA Version 2.0.
 
         # Unofficial TOSCA Versions Criteria
         - id: unofficial_tosca_versions
@@ -230,7 +230,7 @@
         - id: implementation_artifact_types
           name: Implementation Artifact Types
           type: strings
-          description: The list of supported implementation artifact types. For example, Scripts, Ansible, or Chef.
+          description: The list of supported implementation artifact types. For example, Ansible Playbooks or Bash Scripts.
 
         # Orchestrator-Specific Types Criterion
         - id: orchestrator_specific_types
@@ -258,7 +258,7 @@
           type: boolean
           description: >
             The orchestrator supports deploying node and relationship templates with custom orchestrator-specific types, e.g., by implementing a plugin.
-            The integration of these types into the orchestrator must not require a contribution to the code base of the orchestrator but should be possible, e.g., by configuring and restarting the orchestrator with a newly added plugin, without rebuilding or repackaging the orchestrator.
+            The integration of these types into the orchestrator must not require a contribution to the code base of the orchestrator but should be possible, e.g., by configuring and restarting the orchestrator with a newly added plugin, without rebuilding, repackaging, or reinstalling the orchestrator.
 
         # Custom Implementation Artifact Types Criterion
         - id: custom_implementation_artifact_types
@@ -266,7 +266,7 @@
           type: boolean
           description: >
             The orchestrator supports executing custom implementation artifact types, e.g., by implementing a plugin.
-            The integration of these types into the orchestrator must not require a contribution to the code base of the orchestrator but should be possible, e.g., by configuring and restarting the orchestrator with a newly added plugin, without rebuilding or repackaging the orchestrator.
+            The integration of these types into the orchestrator must not require a contribution to the code base of the orchestrator but should be possible, e.g., by configuring and restarting the orchestrator with a newly added plugin, without rebuilding, repackaging, or reinstalling the orchestrator.
 
     # Administration Category
     - id: administration
@@ -282,7 +282,7 @@
             - Service Offering
           description: >
             The orchestrator can be operated on-premise or consumed as a service.
-            Values are on-premise and as-a-service.
+            Values are, therefore, On-Premise and Service-Offering.
 
         # Operating Systems Criterion
         - id: operating_systems
@@ -321,7 +321,7 @@
             The list of supported Application Programming Interfaces (APIs).
             An API must at least provide the functionality to deploy and undeploy applications.
             Furthermore, the interaction with the orchestrator using an API must be possible over the network.
-            For example, HTTP REST API, gRPC, or GraphQL.
+            For example, HTTP REST API, GraphQL, or gRPC.
 
     # Documentation Category
     - id: documentation
