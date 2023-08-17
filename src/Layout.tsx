@@ -117,7 +117,7 @@ export default function Layout() {
                 <Typography variant="body2" align="center" color="text.secondary" paragraph>
 
                     <a href="https://www.uni-stuttgart.de/impressum/" target="_blank" rel="noopener">
-                        Copyright &copy; {copyright()} University of Stuttgart
+                        Copyright &copy; {copyright()} University of Stuttgart (Legal Notice)
                     </a>
 
                     <br/>
