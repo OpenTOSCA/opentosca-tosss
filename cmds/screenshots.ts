@@ -32,7 +32,12 @@ async function main() {
 
     await page.setViewport({width: 1080, height: 1900})
     await page.goto('http://localhost:3000')
-    await page.screenshot({path: getPath('tosss.png')})
+    await page.screenshot({path: getPath('landing-page-portrait.png')})
+
+    await page.goto('http://localhost:3000/classification');
+    await page.click('#panel1a-header')
+    await sleep()
+    await page.screenshot({path: getPath('classification-portrait.png')})
 
     await browser.close()
 }
