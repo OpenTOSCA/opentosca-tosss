@@ -22,15 +22,14 @@ import {ExpandMore} from '@mui/icons-material';
 
 export default function Home() {
 
-    /* eslint-disable */
     const publication = `@inproceedings{Stoetzner2023_TOSSS,
     Title = {{A Systematic Technology Review of General-Purpose Open-Source TOSCA Orchestrators}},
-    Author = {St\"{o}tzner, Miles and 
+    Author = {St\\"{o}tzner, Miles and 
         Becker, Steffen and 
         Harzenetter, Lukas and 
         Leymann, Frank and
         Weder, Benjamin and
-        Breitenb\"{u}cher, Uwe and
+        Breitenb\\"{u}cher, Uwe and
         Kopp, Oliver and
         Klein, Kevin and
         Soldani, Jacopo},
