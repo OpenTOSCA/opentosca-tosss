@@ -4,10 +4,10 @@ import {
     AccordionDetails,
     AccordionSummary,
     Box,
-    Button, Card, CardActionArea, CardMedia,
+    Button, Card,
     Container,
     Grid,
-    Stack, Tooltip,
+    Stack,
     Typography
 } from '@mui/material'
 import {Link} from 'react-router-dom'
