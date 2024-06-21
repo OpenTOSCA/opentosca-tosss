@@ -4,10 +4,10 @@ import {
     AccordionDetails,
     AccordionSummary,
     Box,
-    Button,
+    Button, Card, CardActionArea, CardMedia,
     Container,
     Grid,
-    Stack,
+    Stack, Tooltip,
     Typography
 } from '@mui/material'
 import {Link} from 'react-router-dom'
@@ -21,6 +21,32 @@ import framework from '../framework';
 import {ExpandMore} from '@mui/icons-material';
 
 export default function Home() {
+
+    /* eslint-disable */
+    const publication = `@inproceedings{Stoetzner2023_TOSSS,
+    Title = {{A Systematic Technology Review of General-Purpose Open-Source TOSCA Orchestrators}},
+    Author = {St\"{o}tzner, Miles and 
+        Becker, Steffen and 
+        Harzenetter, Lukas and 
+        Leymann, Frank and
+        Weder, Benjamin and
+        Breitenb\"{u}cher, Uwe and
+        Kopp, Oliver and
+        Klein, Kevin and
+        Soldani, Jacopo},
+    Year = 2023,
+    Month = dec,
+    Booktitle = {Proceedings of the 16th International Conference on Utility and Cloud Computing (UCC 2023)},
+    Publisher = {ACM},
+    Address = {New York, NY, USA},
+    Pages = {1--11},
+    articleno = {6},
+    Doi = {10.1145/3603166.3632130},
+    isbn = {9798400702341},
+    url = {https://doi.org/10.1145/3603166.3632130},
+    numpages = {11},
+}`
+
     return (
         <Box>
             <RouteContainer path={routes.home.path}>
@@ -95,6 +121,30 @@ export default function Home() {
                                 </Grid>
                             ))}
                         </Grid>
+                    </Container>
+                </Box>
+            </RouteContainer>
+
+            <div className="hline"/>
+
+            <RouteContainer path={routes.publication.path}>
+                <Box>
+                    <Container maxWidth="md" sx={{pt: 8, pb: 8}}>
+                        <Typography variant="h4" align="center" gutterBottom>
+                            Publication
+                        </Typography>
+                        <Typography variant="h6" align="center" color="text.secondary" paragraph>
+                            You can find many details in our publication.<br/><a href="https://doi.org/10.1145/3603166.3632130" target="_blank" rel="noreferrer">https://doi.org/10.1145/3603166.3632130</a>
+                        </Typography>
+
+                            <Card sx={{mt: 8}} variant="outlined">
+                                <Box sx={{pt: 2, pr: 4, pb: 2, pl: 4}}>
+                                    <pre style={{whiteSpace: "break-spaces"}}>
+                                        {publication}
+                                    </pre>
+                                </Box>
+                            </Card>
+
                     </Container>
                 </Box>
             </RouteContainer>

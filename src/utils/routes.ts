@@ -24,6 +24,12 @@ export const routes = {
         RouteBody: Home,
     },
 
+    publication: {
+        name: 'Publication',
+        path: '/publication',
+        RouteBody: Home,
+    },
+
     framework: {
         name: 'Framework',
         path: '/framework',
