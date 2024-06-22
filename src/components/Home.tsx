@@ -138,7 +138,7 @@ export default function Home() {
 
                             <Card sx={{mt: 8}} variant="outlined">
                                 <Box sx={{pt: 2, pr: 4, pb: 2, pl: 4}}>
-                                    <pre style={{whiteSpace: "break-spaces"}}>
+                                    <pre style={{whiteSpace: 'break-spaces'}}>
                                         {publication}
                                     </pre>
                                 </Box>
