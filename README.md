@@ -8,6 +8,36 @@ the
 questionnaire guides you through business related criteria the classification table contains additional technical
 information. For details take a look at our framework.
 
+## Publication 
+
+You can find more details in our publication, see https://doi.org/10.1145/3603166.3632130.
+
+````
+@inproceedings{Stoetzner2023_TOSSS,
+    Title = {{A Systematic Technology Review of General-Purpose Open-Source TOSCA Orchestrators}},
+    Author = {St\"{o}tzner, Miles and 
+        Becker, Steffen and 
+        Harzenetter, Lukas and 
+        Leymann, Frank and
+        Weder, Benjamin and
+        Breitenb\"{u}cher, Uwe and
+        Kopp, Oliver and
+        Klein, Kevin and
+        Soldani, Jacopo},
+    Year = 2023,
+    Month = dec,
+    Booktitle = {Proceedings of the 16th International Conference on Utility and Cloud Computing (UCC 2023)},
+    Publisher = {ACM},
+    Address = {New York, NY, USA},
+    Pages = {1--11},
+    articleno = {6},
+    Doi = {10.1145/3603166.3632130},
+    isbn = {9798400702341},
+    url = {https://doi.org/10.1145/3603166.3632130},
+    numpages = {11}
+}
+````
+
 ## How to Start a Development Server
 
 ```shell

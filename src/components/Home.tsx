@@ -133,7 +133,7 @@ export default function Home() {
                             Publication
                         </Typography>
                         <Typography variant="h6" align="center" color="text.secondary" paragraph>
-                            You can find many details in our publication.<br/><a href="https://doi.org/10.1145/3603166.3632130" target="_blank" rel="noreferrer">https://doi.org/10.1145/3603166.3632130</a>
+                            You can find more details in our publication.<br/><a href="https://doi.org/10.1145/3603166.3632130" target="_blank" rel="noreferrer">https://doi.org/10.1145/3603166.3632130</a>
                         </Typography>
 
                             <Card sx={{mt: 8}} variant="outlined">
