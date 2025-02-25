@@ -12,7 +12,7 @@ information. For details take a look at our framework.
 
 You can find more details in our publication, see https://doi.org/10.1145/3603166.3632130.
 
-````
+```bibtex
 @inproceedings{Stoetzner2023_TOSSS,
     Title = {{A Systematic Technology Review of General-Purpose Open-Source TOSCA Orchestrators}},
     Author = {St\"{o}tzner, Miles and 
@@ -36,7 +36,7 @@ You can find more details in our publication, see https://doi.org/10.1145/360316
     url = {https://doi.org/10.1145/3603166.3632130},
     numpages = {11}
 }
-````
+```
 
 ## How to Start a Development Server
 
